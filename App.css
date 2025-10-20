@@ -1,0 +1,192 @@
+@import "tailwindcss";
+/* Basic App Layout */
+.App {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  text-align: center;
+  background-color: #f4f6f8;
+  min-height: 100vh;
+}
+
+.app-nav {
+  background-color: #ffffff;
+  padding: 1rem 2rem;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e0e0e0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.app-nav h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.app-nav a {
+  color: #007bff;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease-in-out;
+}
+
+.app-nav a:hover {
+  color: #0056b3;
+  border-bottom: 2px solid #0056b3;
+}
+
+main {
+  padding: 2rem;
+}
+
+/* Recommendation Page */
+.recommendation-page {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 120px); /* Adjust based on nav height */
+  max-width: 900px;
+  margin: auto;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.conversation-container {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.message {
+  max-width: 85%;
+  margin-bottom: 1rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 18px;
+  line-height: 1.5;
+}
+
+.message.user {
+  align-self: flex-end;
+  background-color: #007bff;
+  color: white;
+  border-bottom-right-radius: 4px;
+}
+
+.message.bot {
+  align-self: flex-start;
+  background-color: #e9ecef;
+  border-bottom-left-radius: 4px;
+}
+
+.query-form {
+  display: flex;
+  padding: 1rem;
+  border-top: 1px solid #e0e0e0;
+  background-color: #f8f9fa;
+}
+
+.query-form input {
+  flex-grow: 1;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ced4da;
+  border-radius: 20px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.query-form input:focus {
+  border-color: #007bff;
+}
+
+.query-form button {
+  padding: 0.75rem 1.5rem;
+  margin-left: 0.75rem;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.query-form button:hover {
+  background-color: #0056b3;
+}
+
+.query-form button:disabled {
+  background-color: #a0c7ef;
+  cursor: not-allowed;
+}
+
+/* Product Card & Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.product-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: left;
+  background-color: #ffffff;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  background-color: #f0f0f0;
+}
+
+.product-info {
+  padding: 1rem;
+}
+
+.product-name {
+  margin: 0 0 0.5rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.product-description {
+  font-size: 0.875rem;
+  color: #6c757d;
+  line-height: 1.4;
+}
+
+/* Analytics Page */
+.analytics-page {
+  max-width: 1000px;
+  margin: auto;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.chart-container {
+  margin-top: 2rem;
+}
